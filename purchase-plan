@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+
+<head> 
+<style>
+body{
+background-color: black;
+}
+p{
+	text-align: left;
+}
+button{
+	background-color: white;
+	border-radius: 15%;
+	height: 50px;
+	width: 25%;
+	font-size: 14px;
+	margin: 50px 0 20px 0;
+	float: left;
+}
+/* Dropdown Button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  width: 100%;
+  margin: -50px 0 -20px 0;
+  padding: 16px;
+  font-size: 16px;
+  float: right;
+ 
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
+<title> Purchase Plan </title>
+
+</head>
+
+<body>
+	<center>
+		<div style= "background-color:gray;padding:100px;height:600px;width:30%; margin-top: 10%; margin-bottom: 10%"; text-align:center> 
+			<h3 style="font-size:36px; margin-top: 10px"> <u>Purchase Plan</u> </h3>
+			<div style="background-color: white;border-radius: 15%;height: 400px;width: 80%; font-size: 18px; padding: 20px; border-color: black; border-style: solid; border-width: 2px; ">
+				<p> Name: </p>
+				<div>
+				<p> Plan Type: </p>
+				<div class="dropdown">
+				  <button class="dropbtn">Dropdown</button>
+				  <div class="dropdown-content">
+					<a href="#">Link 1</a>
+					<a href="#">Link 2</a>
+					<a href="#">Link 3</a>
+				  </div>
+				</div>
+				</div>
+				<p> Credit Card Number: </p>
+			</div>
+			<button> Back </button>
+		</div>
+	</center>
+</body>
+</html>
