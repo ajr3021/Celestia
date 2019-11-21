@@ -6,7 +6,7 @@ function to_settings() {
 	window.location.href = "settings.html";
 }
 function to_sign_in() {
-	window.location.href = "sing-in.html";
+	window.location.href = "sign-in.html";
 }
 function to_plans() {
 	window.location.href = "PurchasePlans.html";
@@ -25,4 +25,10 @@ function to_item_choices() {
 }
 function to_behavior_prediction() {
 	window.location.href = "behavior-trends.html";
+}
+function change_personal(){
+	document.getElementById("drop").innerHTML = 'Personal'
+}
+function change_professional(){
+	document.getElementById("drop").innerHTML = 'Professional'
 }
