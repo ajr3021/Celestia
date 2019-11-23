@@ -12,7 +12,7 @@ button{
 	height: 40px;
 	width: 25%;
 	font-size: 50px;
-	margin: 20px 20px 20px 0;
+	margin: 10% 10% 10% 0;
 	border-color: gray;
 	float: right;
 }
@@ -23,7 +23,7 @@ p{
 }
 </style>
 <title> Settings </title>
-
+<script src="celestia.js"></script>
 </head>
 
 <body>
@@ -32,14 +32,14 @@ p{
 			<h3 style="font-size:72px; margin-top: 10px"> <u>Settings</u> </h3>
 			<div style="background-color: white; height: 70%; width: 50%;float: left; margin: -40px 20px 0 -40px;border-radius: 15%; border-color:black; border-width: 2px; border-style: solid"> 
 				<p> Movement </p>
-				<button></button>
+				<button onclick="to_movement();"></button>
 				<p> Decision</p>
-				<button></button>
+				<button onclick="to_decision_making()"></button>
 				<p style="margin-top: -25px"> Making</p>
 				<p> Item Picks </p>
-				<button></button>
+				<button onclick="to_item_choices()"></button>
 				<p> Behavior </p>
-				<button></button>
+				<button onclick="to_behavior_prediction()"></button>
 				<p style="margin-top: -25px"> Predictions </p>
 			</div>
 			<div style="background-color: white; height: 70%; width: 50%; float: right; margin: -40px -40px 0 20px;border-radius: 15%; border-color:black; border-width: 2px; border-style: solid">
@@ -51,7 +51,7 @@ p{
 				<button></button>
 			</div>
 			<div>
-				<button style="float: right; background-color: white; border-color: black; border-radius: 15%; height: 60px"> Back</button>
+				<button style="float: right; background-color: white; border-color: black; border-radius: 15%; height: 50px; width: 25%; font-size: 14px; margin: 50px 0 20px 0;" onclick="back_home()"> Back</button>
 			</div>
 		</div>
 	</center>
