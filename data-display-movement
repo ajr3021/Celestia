@@ -22,7 +22,7 @@ button{
 }
 </style>
 <title> Data Display: Movement </title>
-
+<script src="celestia.js"></script>
 </head>
 
 <body>
@@ -30,13 +30,20 @@ button{
 		<div style= "background-color:gray;padding:100px;height:600px;width:30%; margin-top: 10%; margin-bottom: 10%"; text-align:center> 
 			<h3 style="font-size:36px; margin-top: 10px"> <u>Data Display: Movement</u> </h3>
 			<div style="background-color: white;border-radius: 15%;height: 400px;width: 80%; font-size: 18px; padding: 20px; border-color: black; border-style: solid; border-width: 2px; ">
-				<p> Player: </p>
-				<p> Current Position: </p>
-				<p> Repeat Locations: </p>
-				<p> Location Trends: </p>
-				<p> Location History: </p>
+				<p> Player: Player 1 </p> 
+				<p id="CurrentPosition"> Current Position: </p>
+				<p id="RepeatLocations"> Repeat Locations: </p>
+				<p id=LocationTrends> Location Trends: </p>
+				<p id="LocationHistory"> Location History: </p>
+				<script>
+				var location_list = [[50,100], [10, 80], [70, 46], [67, 89], [32, 90], [100, 0], [45, 67], [12, 34], [45, 87], [12, 6], [0, 0], [100, 100], [39, 80]];
+				document.getElementById("CurrentPosition").innerHTML = "Current Position: " + location_list[Math.floor(Math.random() * 12)];
+				document.getElementById('RepeatLocations').innerHTML = "Repeat Locations: " + location_list[Math.floor(Math.random() * 12)] + " " + location_list[Math.floor(Math.random() * 12)] + ' ' + location_list[Math.floor(Math.random() * 12)];
+				document.getElementById('LocationTrends').innerHTML = "Location Trends: " + location_list[Math.floor(Math.random() * 12)] + " " + location_list[Math.floor(Math.random() * 12)] + ' ' + location_list[Math.floor(Math.random() * 12)];
+				document.getElementById("LocationHistory").innerHTML = "Location History: " + location_list[0] + ' ' + location_list[1] + ' '  + location_list[2] + ' ' + location_list[3] + '\n' + location_list[4] + ' ' + location_list[5] + ' ' + location_list[6] + ' ' + location_list[7] + ' ' + location_list[8] + ' ' + location_list[9]  + ' ' + location_list[10] + '\n' + location_list[11] + ' ' + location_list[12];
+				</script>
 			</div>
-			<button> Back </button>
+			<button onclick="to_settings()"> Back </button>
 		</div>
 	</center>
 </body>
