@@ -18,9 +18,12 @@ button{
 #download_button{
 	margin: -20px 0 20px 0;
 }
+textarea {
+	height: 20px;
+}
 </style>
 <title> Sign In </title>
-
+<script src="celestia.js"></script>
 </head>
 
 <body>
@@ -29,24 +32,26 @@ button{
 			<h3 style="font-size:72px; margin-top: 10px"> <u>Sign In</u> </h3>
 			<div style="background-color: white; height: 70%; width: 50%;float: left; margin: -40px 20px 0 -40px;border-radius: 15%; border-color:black; border-width: 2px; border-style: solid"> 
 				<h1> <u> Sign In </u> </h3>
-					<form action="/action_page.php">
-  					Email: <input type="text" name="fname"><br>
-  					Password: <input type="text" name="lname"><br>
- 					<input type="submit" value="Submit">
-					</form>
+					<div>
+					<p style="float: left; padding: 15px;"> Email: </p> <textarea style="float: right; margin:20px 10px 0 0;"></textarea>
+					</div>
+					<div>
+					<p style="float: left; margin: 35px 0 0 -44px"> Password: </p> <textarea style="float: right; margin:27px 0 0 0; padding-right: 5px;"></textarea>
+					</div>
 			</div>
 			<div style="background-color: white; height: 70%; width: 50%; float: right; margin: -40px -40px 0 20px;border-radius: 15%; border-color:black; border-width: 2px; border-style: solid">
 				<h1> <u> Sign Up </u> </h3>
-					<form action="/action_page.php">
-  					Email: <input type="text" name="fname"><br>
-  					Password: <input type="text" name="lname"><br>
- 					<input type="submit" value="Submit">
-					</form>
+					<div>
+					<p style="float: left; padding: 15px;"> Email: </p> <textarea style="float: right; margin:20px 10px 0 0;"></textarea>
+					</div>
+					<div>
+					<p style="float: left; margin: 35px 0 0 -44px"> Password: </p> <textarea style="float: right; margin:27px 0 0 0; padding-right: 5px;"></textarea>
+					</div>
 			</div>
-			<div style="background-color: white; height: 20%; width: 50%; float: right; margin: 10px -40px 0 20px;border-radius: 15%; border-color:black; border-width: 2px; border-style: solid; font-size: 36px;"> <u>Sign In</u>
-			</div>
-			<div style="background-color: white; height: 20%; width: 50%; float: left; margin: 10px 20px 0 -40px; border-radius: 15%; border-color:black; border-width: 2px; border-style: solid; font-size: 36px;"><u> Sign Up </u>
-		</div>
+			<button style="background-color: white; height: 20%; width: 50%; float: right; margin: 10px -40px 0 20px;border-radius: 15%; border-color:black; border-width: 2px; border-style: solid; font-size: 36px;" onclick="to_plans()"> <u>Sign Up</u>
+			</button>
+			<button style="background-color: white; height: 20%; width: 50%; float: left; margin: 10px 20px 0 -40px; border-radius: 15%; border-color:black; border-width: 2px; border-style: solid; font-size: 36px;" onclick="to_settings()"><u> Sign In</u>
+		</button>
 	</center>
 </body>
 </html>
