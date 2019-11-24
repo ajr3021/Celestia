@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html>
@@ -21,24 +22,27 @@ button{
 }
 </style>
 <title> Data Display: Item Choices </title>
-
+<script src="celestia.js"></script>
 </head>
 
 <body>
 	<center>
 		<div style= "background-color:gray;padding:100px;height:600px;width:30%; margin-top: 10%; margin-bottom: 10%"; text-align:center> 
-			<h3 style="font-size:36px; margin-top: 10px"> <u>Data Display: Decision Making</u> </h3>
+			<h3 style="font-size:36px; margin-top: 10px"> <u>Data Display: Items</u> </h3>
 			<div style="background-color: white;border-radius: 15%;height: 400px;width: 80%; font-size: 18px; padding: 20px; border-color: black; border-style: solid; border-width: 2px; ">
-				<p> Player: </p>
-				<p> Current Item(s): </p>
-				<p> Item Trends: </p>
-				<p> Item History: </p>
+				<p> Player: Player 1 </p>
+				<p id="CurrentItems"> Current Item(s): </p>
+				<p id="ItemTrends"> Item Trends: </p>
+				<p id="ItemHistory"> Item History: </p>
+				<script>
+				var item_list = ["Attack Items,", "Healing Items,", "Defensive Items,", "Genreal Stat Boost, ", "Enhanced Movement,", "General Stat Reduction,", "Additional Abilities, "];
+				document.getElementById("CurrentItems").innerHTML = "Current Item " + item_list[Math.floor(Math.random() * 6)];
+				document.getElementById('ItemTrends').innerHTML = "Item Trends: " + item_list[Math.floor(Math.random() * 6)] + " " + item_list[Math.floor(Math.random() * 6)] + ' ' + item_list[Math.floor(Math.random() * 6)];
+				document.getElementById("ItemHistory").innerHTML = "Decision History: " + item_list[0] + ' ' + item_list[1] + ' '  + item_list[2] + ' ' + item_list[3] + '\n' + item_list[4] + ' ' + item_list[5] + ' ' + item_list[6];
+				</script>
 			</div>
-			<button> Back </button>
+			<button onclick="to_settings()"> Back </button>
 		</div>
 	</center>
 </body>
 </html>
-
-
-
