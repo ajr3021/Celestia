@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html>
@@ -21,7 +22,7 @@ button{
 }
 </style>
 <title> Data Display: Decision Making </title>
-
+<script src="celestia.js"></script>
 </head>
 
 <body>
@@ -29,13 +30,20 @@ button{
 		<div style= "background-color:gray;padding:100px;height:600px;width:30%; margin-top: 10%; margin-bottom: 10%"; text-align:center> 
 			<h3 style="font-size:36px; margin-top: 10px"> <u>Data Display: Decision Making</u> </h3>
 			<div style="background-color: white;border-radius: 15%;height: 400px;width: 80%; font-size: 18px; padding: 20px; border-color: black; border-style: solid; border-width: 2px; ">
-				<p> Player: </p>
-				<p> Decisions: </p>
-				<p> Repeat Decisions: </p>
-				<p> Decision Trends: </p>
-				<p> Decision History: </p>
+				<p> Player: Player 1</p>
+				<p id = "Decisions"> Decisions: </p>
+				<p id = "RepeatDecisions"> Repeat Decisions: </p>
+				<p id = "DecisionTrends"> Decision Trends: </p>
+				<p id="DecisionHistory"> Decision History: </p>
+				<script>
+				var decisions_list = ["Right,", "Left,", "Up,", "Down,", "Sprint," ,"Aim,", " Jump,", "Walk,", "Attack,", "Block,", "Crouch,", "Diagonal,","No Input,"];
+				document.getElementById("Decisions").innerHTML = "Last Decision: " + decisions_list[Math.floor(Math.random() * 12)];
+				document.getElementById('RepeatDecisions').innerHTML = "Repeat Decisions: " + decisions_list[Math.floor(Math.random() * 12)] + " " + decisions_list[Math.floor(Math.random() * 12)] + ' ' + decisions_list[Math.floor(Math.random() * 12)];
+				document.getElementById('DecisionTrends').innerHTML = "Decision Trends: " + decisions_list[Math.floor(Math.random() * 12)] + " " + decisions_list[Math.floor(Math.random() * 12)] + ' ' + decisions_list[Math.floor(Math.random() * 12)];
+				document.getElementById("DecisionHistory").innerHTML = "Decision History: " + decisions_list[0] + ' ' + decisions_list[1] + ' '  + decisions_list[2] + ' ' + decisions_list[3] + '\n' + decisions_list[4] + ' ' + decisions_list[5] + ' ' + decisions_list[6] + ' ' + decisions_list[7] + ' ' + decisions_list[8] + ' ' + decisions_list[9]  + ' ' + decisions_list[10] + '\n' + decisions_list[11] + ' ' + decisions_list[12];
+				</script>
 			</div>
-			<button> Back </button>
+			<button onclick="to_settings()"> Back </button>
 		</div>
 	</center>
 </body>
