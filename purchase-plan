@@ -80,7 +80,8 @@ button{
 				  </div>
 				</div>
 				</div>
-				<p> Credit Card Number: </p>
+				<p style="float: left; margin: 35px 0 0 0"> Credit Card Number: </p> <textarea style="float: center; margin:27px 0 0 0; padding-right: 100px;"></textarea>
+					</div>
 			</div>
 			<button onclick="to_plans()"> Back </button>
 			<button style="float: right"; onclick="to_settings()"> Purchase </button>
