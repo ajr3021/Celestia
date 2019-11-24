@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html>
@@ -60,7 +61,7 @@ button{
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 </style>
 <title> Purchase Plan </title>
-
+<script src="celestia.js"></script>
 </head>
 
 <body>
@@ -72,17 +73,17 @@ button{
 				<div>
 				<p> Plan Type: </p>
 				<div class="dropdown">
-				  <button class="dropbtn">Dropdown</button>
+				  <button class="dropbtn"; id="drop">Dropdown</button>
 				  <div class="dropdown-content">
-					<a href="#">Link 1</a>
-					<a href="#">Link 2</a>
-					<a href="#">Link 3</a>
+					<a id="personal"; onclick="change_personal()">Personal</a>
+					<a id="professional"; onclick="change_professional()">Professional</a>
 				  </div>
 				</div>
 				</div>
 				<p> Credit Card Number: </p>
 			</div>
-			<button> Back </button>
+			<button onclick="to_plans()"> Back </button>
+			<button style="float: right"; onclick="to_settings()"> Purchase </button>
 		</div>
 	</center>
 </body>
