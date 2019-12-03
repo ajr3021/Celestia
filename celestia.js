@@ -32,3 +32,6 @@ function change_personal(){
 function change_professional(){
 	document.getElementById("drop").innerHTML = 'Professional'
 }
+function to_thank_you_p(){
+	window.location.href = "thankyou_purchasing.html"
+}
